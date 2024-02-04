@@ -1,0 +1,96 @@
+/* CSS (styles.css) */
+
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+.video-container {
+    position: relative;
+    height: 100vh;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    color: #fff;
+}
+
+h1 {
+    font-size: 2em;
+    font-family: 'Love Light', cursive;
+}
+
+.button-container {
+    margin-top: 20px;
+}
+
+.btn, .special-btn {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 10px;
+    text-decoration: none;
+    color: #fff;
+    background-color: #333;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.3s ease-out;
+    font-family: 'Love Light', cursive;
+}
+
+.special-btn:hover {
+    animation: moveRandom 1.5s ease-out forwards;
+    
+}
+
+@keyframes moveRandom {
+    0%, 100% {
+        transform: translate(0, 0);
+    }
+    50% {
+        transform: translate(calc(var(--randX) * 200px), calc(var(--randY) * 200px));
+    }
+}
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 1.5em;
+        font-family: 'Love Light', cursive;
+    }
+    .btn, .special-btn {
+        padding: 8px 16px;
+        margin-bottom: 10px;
+        font-size: 0.8em;
+    }
+}
+
+h2 {
+    font-size: 1.5em;
+    margin-top: 20px;
+    font-family: 'Love Light', cursive;
+}
+
+.gif-container {
+    margin-top: 20px;
+}
+.gif-container img {
+    width: 100%; /* Set the width of the image to 100% of its container */
+    max-width: 200px; /* Optionally, set a maximum width to control the size */
+    height: auto; /* Maintain aspect ratio */
+}
+
+/* Additional styles for audio controls (optional) */
+audio {
+    display: none; /* Hide the audio controls */
+}
